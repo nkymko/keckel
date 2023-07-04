@@ -1,190 +1,208 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Navigasi dengan Display Berbeda, Dropdown, dan Accordion di Detil Display</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-  <style>
-    .display {
-      display: none;
-    }
-
-    .active {
-      display: block;
-    }
-    .nav-sidebar .nav-link:nth-child(odd) {
-  background-color: #f1f1f1;
-}
-
-.nav-sidebar .nav-link:nth-child(even) {
-  background-color: #e9e9e9;
-}
-.split-container {
-      display: flex;
-      height: 40vh;
-    }
-
-    .split-item {
-      flex: 1;
-      border: 1px solid #ccc;
-      padding: 20px;
-    }
-
-    .footer {
-      background-color: #f8f9fa;
-      padding: 20px 0;
-      text-align: center;
-    }
-  </style>
-  <script>
-    function showDisplay(displayId) {
-      var displays = document.getElementsByClassName('display');
-      for (var i = 0; i < displays.length; i++) {
-        displays[i].style.display = 'none';
-      }
-
-      var displayToShow = document.getElementById(displayId);
-      displayToShow.style.display = 'block';
-    }
-  </script>
-</head>
-<body>
-  <header class="p-3 bg-dark text-white text-center">
-    <h1>KELURAHAN</h1>
-  </header>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-3">
-        <nav class="nav flex-column">
-          <a class="nav-link" href="#" onclick="showDisplay('display1')">Profile Kelurahan</a>
-          <a class="nav-link" href="#" onclick="showDisplay('display2')">Perangkat Kelurahan</a>
-          <a class="nav-link" href="#" onclick="showDisplay('display3')">Layanan Publik</a>
-          <a class="nav-link" href="#" onclick="showDisplay('display4')">Infomasi Kelurahan</a>
-          <a class="nav-link" href="#" onclick="showDisplay('display5')">PPID</a>
-        
-
-        <!--  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" onclick="showDisplay('dropdown1')">Dropdown 1</a></li>
-            <li><a class="dropdown-item" href="#" onclick="showDisplay('dropdown2')">Dropdown 2</a></li>
-            <li><a class="dropdown-item" href="#" onclick="showDisplay('dropdown3')">Dropdown 3</a></li>
-          </ul>
--->
-
-        </nav>
-      </div>
-      <div class="col-md-9">
-        <div id="display1" class="display active">
-          <h2>KELURAHAN PULOGEBANG</h2>
-          
-          <!---->
-
-          <div id="accordion1" class="accordion">
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingOne1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
-                Gedung dan Lokasi
-                </button>
-              </h3>
-              <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne1" data-bs-parent="#accordion1">
-                <div class="accordion-body">
-
-                <p>Jalan Raya Pulo Gebang RT.006 RW.003 Kelurahan Pulo Gebang.</p>
-                <div class="split-container">
-                            <div class="split-item">
-                            
-                            <img src="https://timur.jakarta.go.id/storage/kelurahan/1VJMYqIbVvX9fZKA80VFxQnchj1nR1b7GB81NHmW.jpg" width="100%">
-                            </div>
-                            <div class="split-item">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63463.016658852604!2d106.953205!3d-6.20574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b7bd6aac3af%3A0xe2c873238ab0cb69!2sPulo%20Gebang%2C%20Kec.%20Cakung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1687858134461!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-                </div>
-              </div>
-            </div>
-             
-
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingTwo2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-                  Sejarah
-                </button>
-              </h3>
-              <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordion2">
-                <div class="accordion-body">
-                  Konten Accordion Item #2
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingTwo3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
-                Geografi
-                </button>
-              </h3>
-              <div id="collapseTwo3" class="accordion-collapse collapse" aria-labelledby="headingTwo3" data-bs-parent="#accordion3">
-                <div class="accordion-body">
-                  Konten Accordion Item #2
-                </div>
-              </div>
-            </div>
-
-            
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JakGo 2023</title>
+    <!-- bootstrap core -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/28a1cad8ba.js" crossorigin="anonymous"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <!-- top header -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo-jakartago.png" alt="jakartago" width="180" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav page-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Get to Know Jakarta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Explore Jakarta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Information</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav language-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">EN</a>
+              </li>
+              <li class="nav-item language">
+                <a class="nav-link" href="#">INA</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div id="display2" class="display">
-          <h2>Display 2</h2>
-          <p>Ini adalah konten Display 2.</p>
-          <div id="accordion2" class="accordion">
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingOne2">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
-                  Accordion Item #1
-                </button>
-              </h3>
-              <div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#accordion2">
-                <div class="accordion-body">
-                  Konten Accordion Item #1
-                </div>
-              </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="main-feed">
+        <div class="container mt-5 mb-5">
+          <div class="row">
+            <!-- menu list -->
+            <div class="col-md-3">
+              <nav class="nav flex-column menu-control">
+                <a id="menu-1" class="nav-link menu-active" href="#" onclick="showDisplay('display1', 'menu-1')"><i class="fas fa-user-friends mx-2"></i>Profile Kelurahan</a>
+                <a id="menu-2" class="nav-link" href="#" onclick="showDisplay('display2', 'menu-2')"><i class="fas fa-wallet mx-2"></i> Perangkat Kelurahan</a>
+                <a id="menu-3" class="nav-link" href="#" onclick="showDisplay('display3', 'menu-3')"><i class="fa-solid fa-street-view mx-2"></i> Layanan Publik</a>
+                <a id="menu-4" class="nav-link" href="#" onclick="showDisplay('display4', 'menu-4')"><i class="fas fa-folder mx-2"></i> Infomasi Kelurahan</a>
+                <a id="menu-5" class="nav-link" href="#" onclick="showDisplay('display5', 'menu-5')"><i class="fas fa-shield mx-2"></i> PPID</a>
+              </nav>
             </div>
-            <div class="accordion-item">
-              <h3 class="accordion-header" id="headingTwo2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-                  Accordion Item #2
-                </button>
-              </h3>
-              <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordion2">
-                <div class="accordion-body">
-                  Konten Accordion Item #2
+
+            <!-- content -->
+            <div class="col-md-9">
+              <!-- display 1 -->
+              <div id="display1" class="display active">
+                <h2>KELURAHAN PULOGEBANG</h2>
+                <p>6, Jl. Raya Pulo Gebang No.3, RT.6/RW.3, Pulo Gebang, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13950</p>
+
+                <div class="row row-margin g-4 mt-3">
+                  <div class="col-md-7">
+                    <div class="card-wrapper">
+                      <img src="https://timur.jakarta.go.id/storage/kelurahan/1VJMYqIbVvX9fZKA80VFxQnchj1nR1b7GB81NHmW.jpg" width="100%" />
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card-wrapper">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63463.016658852604!2d106.953205!3d-6.20574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b7bd6aac3af%3A0xe2c873238ab0cb69!2sPulo%20Gebang%2C%20Kec.%20Cakung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1687858134461!5m2!1sid!2sid"
+                        width="100%"
+                        height="320px"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Sejarah</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure dolorum.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Geografi</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure dolorum.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Demografi</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure dolorum.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Visi&Misi</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure dolorum.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-7">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Prestasi</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure dolorum.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Inovasi</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure dolorum.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <!-- end of display 1 -->
+
+              <!-- display 2 -->
+              <div id="display2" class="display">
+                <h2>Display 2</h2>
+                <p>Ini adalah konten Display 2.</p>
+                <div id="accordion2" class="accordion">
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne2">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">Accordion Item #1</button>
+                    </h3>
+                    <div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#accordion2">
+                      <div class="accordion-body">Konten Accordion Item #1</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo2">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">Accordion Item #2</button>
+                    </h3>
+                    <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordion2">
+                      <div class="accordion-body">Konten Accordion Item #2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of display 2 -->
+
+              <!-- display 3 -->
+              <div id="display3" class="display"></div>
+              <!-- end of display 3 -->
+
+              <!-- display 4 -->
+              <div id="display4" class="display"></div>
+              <!-- end of display 4 -->
+
+              <!-- display 5 -->
+              <div id="display5" class="display"></div>
+              <!-- end of display 5 -->
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
+    <!-- footer -->
 
-        <div id="dropdown1" class="display">
-          <h2>Dropdown 1</h2>
-          <p>Ini adalah konten Dropdown 1.</p>
-        </div>
-        <div id="dropdown2" class="display">
-          <h2>Dropdown 2</h2>
-          <p>Ini adalah konten Dropdown 2.</p>
-        </div>
-        <div id="dropdown3" class="display">
-          <h2>Dropdown 3</h2>
-          <p>Ini adalah konten Dropdown 3.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer class="footer">
-    <div class="container">
-      <p>Hak Cipta &copy; 2023 Kelurahan Pulogebang. All rights reserved.</p>
-    </div>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Script -->
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <!-- custom js -->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
