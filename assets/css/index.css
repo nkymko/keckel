@@ -39,8 +39,9 @@ header {
   content: "‎";
   position: absolute;
   margin-left: 50px;
-  height: 40px;
-  width: 2px;
+  top: 25px;
+  height: 50px;
+  width: 1px;
   background-color: #111;
 }
 
@@ -56,7 +57,7 @@ header {
   font-weight: 500;
 }
 
-.navbar .language-nav .nav-link {
+.navbar .language-nav .language .nav-link {
   background-color: #f5f5f5;
   border-radius: 5px;
 }
@@ -103,6 +104,10 @@ header {
   font-weight: 600;
 }
 
+.fixed-nav .row .fixed-menu .nav-item .nav-link {
+  font-size: 20px;
+}
+
 .display-fixed {
   display: none;
 }
@@ -115,26 +120,28 @@ header {
 
 /* main section */
 
-.menu-active {
-  background-color: #f5f5f5;
-  color: #111;
-  font-weight: 600;
-  border-radius: 20px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.main-feed{
+.main-feed {
   min-height: 500px;
 }
 
 .main-feed .menu-control .nav-link {
   color: #111;
+  font-weight: 500;
+  border-radius: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.main-feed .menu-control .menu-active {
+  color: #fff;
+  background-color: #003d81;
+  font-weight: 600;
   border-radius: 20px;
 }
 
 .main-feed .menu-control .nav-link:hover {
   background-color: #f5f5f5;
+  color: #111;
   border-radius: 20px;
 }
 
@@ -150,7 +157,7 @@ header {
   min-height: 320px;
   width: 100%;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .main-feed #display1 .card-wrapper img {
@@ -184,7 +191,7 @@ header {
   text-align: center;
 }
 
-.main-feed #display1 .card .card-body .regular::before,
+/* .main-feed #display1 .card .card-body .regular::before,
 .main-feed #display1 .card .card-body .regular::after {
   content: "";
   position: absolute;
@@ -242,7 +249,43 @@ header {
 .main-feed #display1 .card .card-body .sm::after {
   right: 0;
   transform: translateY(-50%);
+} */
+
+.card-perangkat-kel {
+  border: none;
+  margin: 50px 0px;
 }
+
+.card-perangkat-kel .card-body {
+  padding-left: 30px;
+}
+
+.card-perangkat-kel .card-body .card-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.card-perangkat-kel .card-body .card-text{
+  font-weight: 500;
+  font-size: 24px;
+  color: #003d81;
+}
+
+
+#display1 .accordion .accordion-item,
+#display2 .accordion .accordion-item,
+#display3 .accordion .accordion-item{
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+#display1 .accordion .accordion-item .accordion-button,
+#display2 .accordion .accordion-item .accordion-button,
+#display3 .accordion .accordion-item .accordion-button{
+  font-weight: 500;
+}
+
+
 /* end of main section */
 
 /* footer */
@@ -272,7 +315,7 @@ footer .email:hover {
   text-decoration: underline;
 }
 
-footer .copyright-section{
+footer .copyright-section {
   font-size: 13px;
 }
 

@@ -45,10 +45,20 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav language-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">EN</a>
+                <!-- Facebook -->
+                <a type="button" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li class="nav-item">
+                <a type="button" class="nav-link"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li class="nav-item">
+                <a type="button" class="nav-link"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a type="button" class="nav-link"><i class="fab fa-instagram"></i></a>
               </li>
               <li class="nav-item language">
-                <a class="nav-link" href="#">INA</a>
+                <a class="nav-link" href="#"><i class="fa fa-linkedin p-1"></i></a>
               </li>
             </ul>
           </div>
@@ -156,15 +166,15 @@
     <main>
       <section class="main-feed">
         <div class="container mt-5 mb-5">
-          <div class="row">
+          <div class="row g-5">
             <!-- menu list -->
             <div class="col-md-3">
               <nav class="nav flex-column menu-control">
-                <a id="menu-1" class="nav-link menu-active" href="#" onclick="showDisplay('display1', 'menu-1')"><i class="fas fa-user-friends mx-2"></i>Profile Kelurahan</a>
-                <a id="menu-2" class="nav-link" href="#" onclick="showDisplay('display2', 'menu-2')"><i class="fas fa-wallet mx-2"></i> Perangkat Kelurahan</a>
-                <a id="menu-3" class="nav-link" href="#" onclick="showDisplay('display3', 'menu-3')"><i class="fa-solid fa-street-view mx-2"></i> Layanan Publik</a>
-                <a id="menu-4" class="nav-link" href="#" onclick="showDisplay('display4', 'menu-4')"><i class="fas fa-folder mx-2"></i> Infomasi Kelurahan</a>
-                <a id="menu-5" class="nav-link" href="#" onclick="showDisplay('display5', 'menu-5')"><i class="fas fa-shield mx-2"></i> PPID</a>
+                <a id="menu-1" class="nav-link mb-2 menu-active" href="#profil-kelurahan" onclick="showDisplay('display1', 'menu-1')"><i class="fas fa-user-friends mx-2"></i>Profile Kelurahan</a>
+                <a id="menu-2" class="nav-link mb-2" href="#perangkat-kelurahan" onclick="showDisplay('display2', 'menu-2')"><i class="fas fa-wallet mx-2"></i> Perangkat Kelurahan</a>
+                <a id="menu-3" class="nav-link mb-2" href="#layanan-publik" onclick="showDisplay('display3', 'menu-3')"><i class="fa-solid fa-street-view mx-2"></i> Layanan Publik</a>
+                <a id="menu-4" class="nav-link mb-2" href="#informasi-kelurahan" onclick="showDisplay('display4', 'menu-4')"><i class="fas fa-folder mx-2"></i> Infomasi Kelurahan</a>
+                <a id="menu-5" class="nav-link mb-2" href="#ppid" onclick="showDisplay('display5', 'menu-5')"><i class="fas fa-shield mx-2"></i> PPID</a>
               </nav>
             </div>
 
@@ -172,7 +182,7 @@
             <div class="col-md-9">
               <!-- display 1 -->
               <div id="display1" class="display active">
-                <h2>KELURAHAN PULOGEBANG</h2>
+                <h2 style="font-weight: 700">Kelurahan Pulo Gebang</h2>
                 <p>6, Jl. Raya Pulo Gebang No.3, RT.6/RW.3, Pulo Gebang, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13950</p>
 
                 <div class="row row-margin g-4 mt-3">
@@ -194,72 +204,83 @@
                       ></iframe>
                     </div>
                   </div>
+                </div>
 
-                  <div class="col-md-6">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title regular">Sejarah</h5>
-                        <p class="card-text">
-                          Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure
-                          dolorum.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title regular">Geografi</h5>
-                        <p class="card-text">
-                          Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure
-                          dolorum.
-                        </p>
+                <div class="accordion mt-5 mb-5" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">Sejarah</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-md-5">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title sm">Demografi</h5>
-                        <p class="card-text">
-                          Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure
-                          dolorum.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-7">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title large">Visi&Misi</h5>
-                        <p class="card-text">
-                          Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure
-                          dolorum.
-                        </p>
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">Geografi</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-md-7">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title large">Prestasi</h5>
-                        <p class="card-text">
-                          Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure
-                          dolorum.
-                        </p>
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">Demografi</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title sm">Inovasi</h5>
-                        <p class="card-text">
-                          Lorem ipsum dolor sit amet. Qui harum ducimus et rerum beatae eos blanditiis eveniet et perspiciatis ipsa. Hic corporis galisum eum placeat impedit qui voluptatum minus quo laborum nesciunt id optio fugiat aut iure
-                          dolorum.
-                        </p>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">Visi & Misi</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">Prestasi</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">Inovasi</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
                       </div>
                     </div>
                   </div>
@@ -269,23 +290,76 @@
 
               <!-- display 2 -->
               <div id="display2" class="display">
-                <h2>Display 2</h2>
-                <p>Ini adalah konten Display 2.</p>
-                <div id="accordion2" class="accordion">
-                  <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingOne2">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">Accordion Item #1</button>
-                    </h3>
-                    <div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#accordion2">
-                      <div class="accordion-body">Konten Accordion Item #1</div>
+                <h2 style="font-weight: 700">Perangkat Kelurahan</h2>
+                <div class="card mb-3 card-perangkat-kel">
+                  <div class="row g-0">
+                    <div class="col-md-3">
+                      <img src="assets/img/perangkat-kelurahan ex.jpeg" class="img-fluid rounded-circle" alt="perangkat-kelurahan ex" width="200px" />
+                    </div>
+                    <div class="col-md-9">
+                      <div class="card-body">
+                        <h5 class="card-title">Fajar Eko Satrio</h5>
+                        <p class="card-text">PJ Kelurahan Pulo Gebang</p>
+                        <p class="card-text"><small class="text-body-secondary">2019-2024</small></p>
+                      </div>
                     </div>
                   </div>
+                </div>
+
+                <div class="accordion mt-5 mb-5" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">Profil Pimpinan</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Struktur Organisasi
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        Tugas dan Fungsi
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingTwo2">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">Accordion Item #2</button>
-                    </h3>
-                    <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordion2">
-                      <div class="accordion-body">Konten Accordion Item #2</div>
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">LMK</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -293,11 +367,84 @@
               <!-- end of display 2 -->
 
               <!-- display 3 -->
-              <div id="display3" class="display"></div>
+              <div id="display3" class="display">
+                <h2 style="font-weight: 700">Layanan Publik Kelurahan</h2>
+
+                <div class="accordion mt-5 mb-5" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">Layanan Kesehatan</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse">
+                      <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Layanan Kependudukan
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">Transportasi</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">PTSP</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item mb-4">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">Kanal Aduan</button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                        appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- end of display 3 -->
 
               <!-- display 4 -->
-              <div id="display4" class="display"></div>
+              <div id="display4" class="display">
+                <h2 style="font-weight: 700">Informasi Kelurahan</h2>
+              </div>
               <!-- end of display 4 -->
 
               <!-- display 5 -->
@@ -319,7 +466,7 @@
           <div class="col-lg-8 col-md-12 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-4">TIMUR.JAKARTA.GO.ID</h5>
             <p>Jalan Dr. Sumarno Pulogebang Kantor Walikota Jakarta Timur, Jakarta Timur</p>
-            <p>Telp. (+6221) 768 0987 <br />Fax. (+6221) 097 2781 <br /><a   href="mailto:suratwalikotajt@jakarta.go.id" class="email">suratwalikotajt@jakarta.go.id</a></p>
+            <p>Telp. (+6221) 768 0987 <br />Fax. (+6221) 097 2781 <br /><a href="mailto:suratwalikotajt@jakarta.go.id" class="email">suratwalikotajt@jakarta.go.id</a></p>
           </div>
           <!--Grid column-->
 
@@ -347,7 +494,10 @@
 
       <!-- Copyright -->
       <div class="text-center p-3 copyright-section" style="background-color: rgba(0, 0, 0, 0.2)">
-        Copyright &copy; <script>document.write(new Date().getFullYear())</script>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
         <a class="text-white" href="https://timur.jakarta.go.id/">Sudin Kominfotik</a>
       </div>
       <!-- Copyright -->

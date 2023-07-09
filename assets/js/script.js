@@ -17,23 +17,41 @@ function showDisplay(displayId, menuId) {
 }
 
 function toggleFixed(fixedId) {
-  const display = document.getElementById('fixed-nav');
-  display.classList.toggle('hidden');
-
+  const display = document.getElementById("fixed-nav"); // main background
+  const menuToShow = document.getElementById(fixedId); // menu list
+  const currentMenu = document.querySelector('.curr-act'); // current active menu
   const displayMenu = document.getElementsByClassName("display-fixed");
-  for (var i = 0; i < displayMenu.length; i++) {
-    displayMenu[i].style.display = 'none';
+
+  if (currentMenu != null) {
+    currentMenu.classList.remove('curr-act');
   }
 
-  const menuToShow = document.getElementById(fixedId);
-  menuToShow.style.display = 'block';
+  if (currentMenu === menuToShow) {
+    display.classList.add("hidden");
+    menuToShow.classList.remove('curr-act');
+
+    for (var i = 0; i < displayMenu.length; i++) {
+      displayMenu[i].style.display = "none";
+    }
+
+  } else {
+    display.classList.remove("hidden");
+    
+
+    for (var i = 0; i < displayMenu.length; i++) {
+      displayMenu[i].style.display = "none";
+    }
+
+    menuToShow.style.display = "block";
+    menuToShow.classList.add('curr-act');
+  }
 }
 
 const fixedMenu = document.querySelector(".fixed-menu");
 
 document.addEventListener("mouseup", function (event) {
   if (!fixedMenu.contains(event.target)) {
-    const display = document.getElementById('fixed-nav');
-    display.classList.add('hidden');
+    const display = document.getElementById("fixed-nav");
+    display.classList.add("hidden");
   }
 });
