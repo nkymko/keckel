@@ -265,27 +265,132 @@ header {
   font-size: 24px;
 }
 
-.card-perangkat-kel .card-body .card-text{
+.card-perangkat-kel .card-body .card-text {
   font-weight: 500;
   font-size: 24px;
   color: #003d81;
 }
 
-
-#display1 .accordion .accordion-item,
-#display2 .accordion .accordion-item,
-#display3 .accordion .accordion-item{
+.accordion .accordion-item {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 
-#display1 .accordion .accordion-item .accordion-button,
-#display2 .accordion .accordion-item .accordion-button,
-#display3 .accordion .accordion-item .accordion-button{
+.accordion .accordion-item .accordion-button {
   font-weight: 500;
+  border-radius: 0;
 }
 
+.accordion-button:not(.collapsed) {
+  background-color: white;
+}
 
+/* Calendar styling */
+#calendar {
+  margin-top: 20px;
+  background-color: #003d81;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#calendar tbody,
+#calendar th,
+#calendar td {
+  background-color: #003d81;
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-day {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 2px;
+}
+
+.calendar-day:hover {
+  background-color: #f1f1f1;
+}
+
+.current-day {
+  position: relative;
+  font-weight: 700;
+  border-radius: 50%;
+  color: white;
+  overflow: hidden;
+}
+
+.current-day::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+}
+
+.day-name {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.calendar-nav-btn:hover {
+  cursor: pointer;
+  color: #f04d23;
+}
+
+.table-kegiatan-kel tbody tr td {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px;
+  border: 1px solid #f5f5f5;
+}
+
+.form-pengaduan {
+}
+
+.form-pengaduan .card-body {
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.form-pengaduan .card-body .left-side {
+  padding: 20px 50px;
+}
+
+.form-pengaduan .card-body .card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form-pengaduan .card-body .right-side {
+  background-color: #f5b100;
+  padding: 0;
+  overflow: hidden;
+  width: 129px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.form-pengaduan .card-body .add-icon {
+  position: absolute;
+  top: 35%;
+  color: #00d315;
+  right: 29.3%;
+  background-color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+}
+
+.file-img {
+  position: absolute;
+  bottom: 0px;
+  margin-left: 7px;
+  z-index: 10;
+}
 /* end of main section */
 
 /* footer */
